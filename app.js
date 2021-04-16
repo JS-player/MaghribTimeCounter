@@ -8,7 +8,7 @@ var m = today.getMonth();
 const month = monthNames[m];
 var date1 = month + ' ' + day + ', ' + today.getFullYear();
 //=================================================================
-fetch('http://api.ipify.org/?format=json', {
+fetch('https://api.ipify.org/?format=json', {
     method: 'GET'
   })
   .then(response => response.json())
