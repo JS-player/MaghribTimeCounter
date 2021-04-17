@@ -76,20 +76,6 @@ footer {
   display: none;
   padding: 1rem;
 }
-@media only screen and (max-device-width: 400px) {
-
-#loc {
-    font-size: 1.7rem;
-    margin-top: 20px;
-    }
-.container {
-    border-radius: 5px;
-    height: 500px;
-}
-* {
-  height: 110px;
-}
-}
 
 @media all and (max-width: 768px) {
   h1 {
