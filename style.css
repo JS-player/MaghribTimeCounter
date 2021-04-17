@@ -40,6 +40,8 @@ h1 {
   letter-spacing: .125rem;
   text-transform: uppercase;
   font-family: 'Lalezar', cursive;
+  font-size: 3rem;
+  color: #515692;
 }
 
 li {
@@ -53,7 +55,14 @@ li {
 
 li span {
   display: block;
-  font-size: 4.5rem;
+  font-size: 6rem;
+}
+
+footer {
+  color: #f9f2f2;
+  position: absolute;
+  bottom: -14px;
+  background-color: #312b2bdb;
 }
 
 #loc {
@@ -78,11 +87,12 @@ li span {
   }
 
   li {
-    font-size: 1.125rem;
+    font-size: 1.7rem;
     padding: .75rem;
   }
 
   li span {
-    font-size: 3.375rem;
+    /* font-size: 3.375rem; */
+    font-size: 6rem;
   }
 }
