@@ -40,8 +40,8 @@ function updateTime() {
     minute = second * 60,
     hour = minute * 60,
     day = hour * 24;
-  var maghribTime = "Apr 15, 2021 18:24:00",
-    //let maghribTime = `${date1} ${maghrib}:00`,
+  //let maghribTime = "Apr 15, 2021 18:24:00",
+  let maghribTime = `${date1} ${maghrib}:00`,
     countDown = new Date(maghribTime).getTime(),
     x = setInterval(function() {
       let now = new Date().getTime(),
