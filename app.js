@@ -1,4 +1,5 @@
 var ip = '';
+document.getElementById('countdown').style.display = "none";
 var maghrib = null;
 var loc = null;
 let today = new Date();
@@ -36,11 +37,12 @@ async function time() {
 }
 
 function updateTime() {
+
   const second = 1000,
     minute = second * 60,
     hour = minute * 60,
     day = hour * 24;
-  //let maghribTime = "Apr 15, 2021 18:24:00",
+  //maghribTime = "Apr 15, 2021 18:24:00",
   let maghribTime = `${date1} ${maghrib}:00`,
     countDown = new Date(maghribTime).getTime(),
     x = setInterval(function() {
@@ -50,12 +52,14 @@ function updateTime() {
       // document.getElementById("days").innerText = Math.floor(distance / (day)),
       if (Math.floor((distance % (day)) / (hour)) < 1) {
         document.getElementsByTagName('li')[0].style.display = "none";
+        document.getElementById('minutes').style.marginRight = '40px';
         if (Math.floor((distance % (hour)) / (minute)) < 1) {
           document.getElementsByTagName('li')[1].style.visibility = "hidden";
         }
       }
-
-      document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+      document.getElementById("headline").innerText = 'متبقي على اذان المغرب ',
+        document.getElementById('countdown').style.display = "",
+        document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
         document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
         document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
       // if (hour = 0) {
