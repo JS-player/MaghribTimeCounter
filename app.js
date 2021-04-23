@@ -70,7 +70,7 @@ async function time() {
     });
 }
 async function hijri() {
-  fetch(`http://www.islamicfinder.us/index.php/api/calendar?user_ip=${ip}&day=${day}&month=${m+1}&year=${year}`, {
+  fetch(`https://www.islamicfinder.us/index.php/api/calendar?user_ip=${ip}&day=${day}&month=${m+1}&year=${year}`, {
       method: 'GET'
     })
     .then(response => response.json())
