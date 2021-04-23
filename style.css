@@ -5,16 +5,12 @@
   padding: 0;
 }
 
-html, body {
-  height: 100%;
-  margin: 0;
-}
-
 body {
-  background-image: url(images/r1.gif);
+  background-image: url(images/dt1.jpg);
   align-items: center;
   background-color: #ffd54f;
   display: flex;
+  flex-direction: row-reverse;
   font-family: -apple-system,
     BlinkMacSystemFont,
     "Segoe UI",
@@ -26,13 +22,55 @@ body {
     sans-serif;
 }
 
-.container {
+.container, .date {
   color: #333;
   margin: 0 auto;
+  margin-top: 10%;
   text-align: center;
   background-color: #fff9f9bd;
   padding: 12px;
-  border-radius: 3px;
+  border-radius: 5px;
+  height: 350px;
+  overflow: hidden;
+}
+
+.container {
+  margin-right: 10px;
+}
+
+.date {
+  background-color: #51a7e0b8;
+  font-stretch: expanded;
+  /* background-image: url(images/s2.jpg); */
+  flex-basis: 40%;
+  display: flex;
+  flex-flow: column;
+}
+
+#date {
+  color: #ecc05b;
+}
+
+ul {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.doaa {
+  color: #ebf9f9;
+  font-size: 2rem;
+  justify-content: center;
+}
+
+p {
+  letter-spacing: .125rem;
+  text-transform: uppercase;
+  font-family: 'Lalezar', cursive;
+  font-size: 3.2rem;
+  direction: rtl;
+  flex: auto;
 }
 
 h1 {
@@ -50,19 +88,11 @@ li {
   list-style-type: none;
   padding: 1em;
   text-transform: uppercase;
-  float: right;
 }
 
 li span {
   display: block;
-  font-size: 6rem;
-}
-
-footer {
-  color: #f9f2f2;
-  position: absolute;
-  bottom: -14px;
-  background-color: #312b2bdb;
+  font-size: 8vw;
 }
 
 #loc {
@@ -71,24 +101,31 @@ footer {
   margin-top: 10px;
 }
 
-.message {
-  font-size: 4rem;
-  display: none;
-  padding: 1rem;
-}
-
-@media all and (max-width: 768px) {
-  h1 {
-    font-size: 1.5rem;
+@media only screen and (max-device-width: 600px) {
+  #loc {
+    font-size: 1.7rem;
+    margin-top: 20px;
   }
 
-  li {
-    font-size: 1.7rem;
-    padding: .75rem;
+  body {
+    flex-direction: column;
+  }
+
+  .doaa {
+    font-size: 4rem;
+  }
+
+  .container, .date {
+    height: 400px;
+    overflow: scroll;
   }
 
   li span {
-    /* font-size: 3.375rem; */
-    font-size: 6rem;
+    font-size: 8rem;
+  }
+
+  .container {
+    margin-right: auto;
+    width: 66%;
   }
 }
