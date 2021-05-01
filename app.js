@@ -62,8 +62,12 @@ async function time() {
     .then(response => response.json())
     .then(data => {
       maghrib = data.results.Maghrib;
+    if(data.settings.location.city != 'null' ){
       loc = `${data.settings.location.country}, ${data.settings.location.city}`;
-      document.getElementById("loc").innerText = loc;
+    }else{
+    loc = `${data.settings.location.country}`;
+    }
+          document.getElementById("loc").innerText = loc;
     }).then(hijri).then(updateTime)
     .catch((error) => {
       console.error('Error:', error);
